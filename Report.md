@@ -55,10 +55,10 @@ The `Agent` is trained using the ddpg training helper function in the `Tennis.ip
 DDPG (Deep Deterministic Poliy Gradient) is an actor-critic approach as a learning algorithm. This works similarly to a DQN but with adjustmets to allow for continous spaces.
 
 DDPG utilizes four networks: 
-    - Local actor
-    - Target actor
-    - Local critic 
-    - Target critic 
+- Local actor
+- Target actor
+- Local critic 
+- Target critic 
 
 The reason for two networks for both the Actor and Critic is that the local version is updated at each episode whereas the target actor weights are held static for a stated number of episodes. This allows for a benchmark network to critique the actors actions and helps account for any occiliations that would be visible in an actor method alone.  
 
@@ -71,11 +71,11 @@ The actor tries to estimate the optimal policy by using the estimated state-acti
 The agent could be improved by utilising a different learning algorithm. 
 
 Examples of possible algorithms are:
-    - PPO
-    - AC3
-    - D4PG
+- PPO
+- AC3
+- D4PG
     
 As well as using an improved memory method such as:
-    - Prioritized Memory
+- Prioritized Memory
 
 OU Noise could also have been used to improve the network. 
