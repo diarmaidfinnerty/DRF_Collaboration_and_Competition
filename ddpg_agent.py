@@ -14,7 +14,7 @@ LR_CRITIC = 1e-4        # learning rate of the critic
 WEIGHT_DECAY = 0        # L2 weight decay
 
 JITTER_DECAY = 0.99
-BEGIN_TRAINING_AT = 500
+BEGIN_NOISE_AT = 500
 JITTER_BEGIN_AT = 1.0
 JITTER_END_AT = 0.1
 
@@ -64,7 +64,7 @@ class Agent():
         # Noise process
         self.random_jitter = RandomJitter(self.action_size,
                                  JITTER_BEGIN_AT, JITTER_END_AT, JITTER_DECAY,
-                                 BEGIN_TRAINING_AT, random_seed)
+                                 BEGIN_NOISE_AT, random_seed)
     
     def act(self, state, i_episode=0, add_noise=True):
         """Returns actions for given state as per current policy."""
