@@ -26,7 +26,7 @@ The critic has a similiar architecture to the actor.
 
 ## Hyper Parameters  
 
-####Training Parameters
+#### Training Parameters
 ```
 BUFFER_SIZE = int(1e5)  # replay buffer size
 BATCH_SIZE = 256        # minibatch size
