@@ -17,12 +17,22 @@ The actor consists of 3 layers.
 * 2 fully connected layers with `ReLU` activation functions. 
 * 1 fully connected output layer with a `Tanh` activation function. 
 
+The number of units in the Actor is as follows
+Layer 1 - 24 -> 256
+Layer 2 - 256 -> 128
+Ouput Layer - 128 -> 2
+
 `Critic`
 The critic has a similiar architecture to the actor. 
 * 1 fully connected layer with a `ReLU` activation function. 
 * The output of the 1st layer is concatenated with the `action` passed into the forward function. 
 * A second fully connected layer with a `ReLU` activation function.
 * A final fully concted output layer without an activation function
+
+The number of units in the Critic is as follows
+Layer 1 - 48 (24 action_size * num_agents) -> 256
+Layer 2 - 256 ( + 4 action size * num_agents) -> 128
+Ouput Layer - 128 -> 1
 
 ## Hyper Parameters  
 
