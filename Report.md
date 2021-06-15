@@ -30,9 +30,9 @@ The critic has a similiar architecture to the actor.
 * A final fully concted output layer without an activation function
 
 The number of units in the Critic is as follows
-Layer 1 - 48 (24 action_size * num_agents) -> 256
-Layer 2 - 256 ( + 4 action size * num_agents) -> 128
-Ouput Layer - 128 -> 1
+* Layer 1 - 48 (24 action_size * num_agents) -> 256
+* Layer 2 - 256 ( + 4 action size * num_agents) -> 128
+* Ouput Layer - 128 -> 1
 
 ## Hyper Parameters  
 
@@ -76,6 +76,8 @@ The actor tries to estimate the optimal policy by using the estimated state-acti
 
 ## Training Rewards
 ![Plot of Rewards](scores.png)
+
+The task was solved in 847 episodes
 
 ## Future Work
 The agent could be improved by utilising a different learning algorithm. 
